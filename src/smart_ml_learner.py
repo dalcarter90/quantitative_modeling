@@ -352,7 +352,9 @@ class SmartMLLearner:
             # Optional backup with timestamp
             if backup:
                 timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-                backup_filename = f"smart_ml_backup_{timestamp}.json"
+                backup_dir = os.path.join(os.path.dirname(__file__), '..', 'backups')
+                os.makedirs(backup_dir, exist_ok=True)
+                backup_filename = os.path.join(backup_dir, f"smart_ml_backup_{timestamp}.json")
                 with open(backup_filename, 'w') as f:
                     json.dump(save_data, f, indent=2)
                 self.logger.info(f"[BACKUP] 💾 Learning data backed up to {backup_filename}")
