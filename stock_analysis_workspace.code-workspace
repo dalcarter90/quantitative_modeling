@@ -1,0 +1,95 @@
+{
+    "folders": [
+        {
+            "name": "ARIMA Forecasting",
+            "path": "."
+        },
+        {
+            "name": "Quantitative Analysis", 
+            "path": "../quantitative_analysis"
+        }
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "./.venv/Scripts/python.exe",
+        "python.terminal.activateEnvironment": true,
+        "files.exclude": {
+            "**/__pycache__": true,
+            "**/*.pyc": true,
+            "**/.git": true
+        },
+        "search.exclude": {
+            "**/node_modules": true,
+            "**/.venv": true,
+            "**/venv": true
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "ms-python.vscode-pylance",
+            "ms-toolsai.jupyter",
+            "ms-python.flake8",
+            "ms-python.black-formatter"
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Run ARIMA Analysis",
+                "type": "shell",
+                "command": "${workspaceFolder:ARIMA Forecasting}/.venv/Scripts/python.exe",
+                "args": ["src/multi_model_forecast.py"],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder:ARIMA Forecasting}"
+                }
+            },
+            {
+                "label": "Run ML Integration",
+                "type": "shell", 
+                "command": "${workspaceFolder:ARIMA Forecasting}/.venv/Scripts/python.exe",
+                "args": ["src/ml_integration.py"],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always", 
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder:ARIMA Forecasting}"
+                }
+            }
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Debug ARIMA",
+                "type": "python",
+                "request": "launch",
+                "program": "${workspaceFolder:ARIMA Forecasting}/src/multi_model_forecast.py",
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder:ARIMA Forecasting}",
+                "python": "${workspaceFolder:ARIMA Forecasting}/.venv/Scripts/python.exe"
+            },
+            {
+                "name": "Debug ML Integration", 
+                "type": "python",
+                "request": "launch",
+                "program": "${workspaceFolder:ARIMA Forecasting}/src/ml_integration.py",
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder:ARIMA Forecasting}",
+                "python": "${workspaceFolder:ARIMA Forecasting}/.venv/Scripts/python.exe"
+            }
+        ]
+    }
+}

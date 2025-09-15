@@ -1,0 +1,6 @@
+# Patch plan for hybrid_pipeline.py to use both GARCH volatility and smart_ml_learner data as exogenous variables for ARIMAX:
+# 1. Load smart_ml_learner data using ARIMAXForecaster.load_learning_data_as_exog.
+# 2. Merge garch_vol and smart_ml exog DataFrames on the index.
+# 3. Set arimax.exog to the merged DataFrame before running ARIMAX.
+# 4. Add error handling for missing or misaligned data.
+# 5. Document the change in comments.

@@ -1,0 +1,16 @@
+{
+  "learning_data": {
+    "stocks": [],
+    "crypto": []
+  },
+  "cycle_count": {
+    "stocks": 4,
+    "crypto": 0
+  },
+  "learning_metrics": {
+    "restart_count": 4,
+    "last_restart": "2025-08-25T11:35:17.895094",
+    "session_start": "2025-08-25T11:35:38.034757",
+    "total_runtime_hours": 0.022272177777777777
+  }
+}

@@ -1,0 +1,35 @@
+Multi-Model Forecasting Report for OPEN
+============================================================
+Generated on: 2025-08-21 12:21:29
+Data period: 6mo
+Forecast horizon: 60 days
+Current price: $3.52
+
+MODEL SUMMARY
+------------------------------
+Successfully fitted models: 5
+Models: ARIMA, GARCH, MC_GBM, MC_Jump, MC_Heston
+
+FORECAST COMPARISON
+------------------------------
+    Model Next Day Price Next Day Return Final Price 60-Day Return
+    GARCH          $3.52          +0.00%       $3.52        +0.00%
+   MC_GBM          $3.55          +0.91%       $5.54       +57.27%
+  MC_Jump          $3.59          +1.91%      $10.10      +186.88%
+MC_Heston          $3.55          +0.75%       $5.49       +55.96%
+
+TECHNICAL INDICATORS
+------------------------------
+
+RISK ASSESSMENT
+------------------------------
+Forecasted volatility: 14.49%
+1-day VaR (95%): -18.29%
+Monte Carlo average VaR (95%): 26.01%
+
+INVESTMENT RECOMMENDATIONS
+------------------------------
+Consensus 1-day return: +0.89%
+Consensus 60-day return: +75.03%
+Short-term outlook: Neutral
+Long-term outlook: Bullish
